@@ -9,6 +9,15 @@
   color: #fff;
 }
 
+/* logo do menu */
+.navbar-brand-logo {
+  height: 40px; /* ajuste conforme necessário */
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
 #inico {
     color: black;
 }
