@@ -5,9 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Óptica Design</title>
 </head>
+<!-- CSS próprio -->
 <link rel="stylesheet" href="style.css">
+<!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- JAVA SCRIPT -->
 <script src="script.js"></script>
+
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Ótica Design</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item">
+          <a class="btn btn-primary ms-lg-3" href="#contato">Agendar Consulta</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="inicio" class="hero d-flex align-items-center">
+  <div class="container text-center">
+    <h1 id="h1Cuidando" class="fw-bold">Cuidando da sua visão</h1>
+    <p class="lead">Consultas, exames e óculos com qualidade e confiança</p>
+  </div>
+</section>
+
+<section id="servicos" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Nossos Serviços</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Exame de Vista</h5>
+            <p class="card-text">Avaliação completa da saúde ocular.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Óculos de Grau</h5>
+            <p class="card-text">Armações modernas e lentes de qualidade.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lentes de Contato</h5>
+            <p class="card-text">Conforto e praticidade para o dia a dia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>Sobre a Ótica</h2>
+        <p>
+          Somos especializados em saúde visual, oferecendo atendimento
+          humanizado, equipamentos modernos e profissionais qualificados.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img id="imgOculos1" src="img/imgInsta.png" class="img-fluid rounded" alt="Ótica">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Entre em Contato</h2>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <input type="text" class="form-control mb-3" placeholder="Nome">
+          <input type="email" class="form-control mb-3" placeholder="E-mail">
+          <textarea class="form-control mb-3" rows="4" placeholder="Mensagem"></textarea>
+          <button class="btn btn-primary w-100">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">© 2026 Ótica Desing | Todos os direitos reservados</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
 </body>
 </html>

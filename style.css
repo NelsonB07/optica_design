@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* imagem aplicada via ::before para controlar opacidade sem afetar o texto */
+  background: none;
+  color: #fff;
+}
+
+#inico {
+    color: black;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('img/fundoOculos.png'); /* substitua por sua imagem: ex. img/banner.jpg */
+  /* imagem um pouco menor */
+  background-size: 100% auto; /* ajuste percentual conforme preferir (ex.: 70%, 60%) */
+  /* deslocada um pouco para baixo */
+  background-position: center 59%; /* valores: center 50%, 60%, 70% para variar */
+  background-repeat: no-repeat;
+  opacity: 0.95; /* controle a transparência aqui (0 = transparente, 1 = opaca) */
+  z-index: 0;
+  filter: brightness(0.95);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1; /* garante que o conteúdo fique acima da imagem */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* texto do hero preto */
+#h1Cuidando,
+#inicio .lead {
+  color: #000;
+}
+
+#imgOculos1 {
+    width: 90%;
+    height: 100%;
+}
