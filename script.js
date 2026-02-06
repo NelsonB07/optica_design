@@ -42,3 +42,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mantém animações e filtros funcionando sem dependência de formulários
 });
+
+type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Optician",
+    "name": "Ótica Design",
+    "image": "img/logo_optica.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Central, 123",
+      "addressLocality": "Sua Cidade",
+      "addressRegion": "Estado",
+      "postalCode": "00000-000",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-23.561684",
+      "longitude": "-46.655981"
+    },
+    "url": "",
+    "telephone": "+55 00 00000-0000",
+    "openingHours": "Mo-Fr 09:00-18:00, Sa 09:00-13:00"
+  }

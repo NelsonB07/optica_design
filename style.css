@@ -61,7 +61,11 @@ html, body {
 }
 .hero-img {
   height: 70vh;
+  width: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
 }
 .carousel-caption {
   bottom: 12%;
