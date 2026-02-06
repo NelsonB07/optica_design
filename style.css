@@ -1,55 +1,154 @@
+:root {
+  --primary: #017745;
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #64748b;
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  scroll-behavior: smooth;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -100%;
+  background: var(--primary);
+  color: #fff;
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  z-index: 1050;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+.navbar-brand-logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.navbar .nav-link {
+  color: var(--text);
+}
+.navbar .nav-link:hover {
+  color: var(--primary);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: #016737;
+  --bs-btn-hover-border-color: #016737;
+  --bs-btn-active-bg: #005f32;
+  --bs-btn-active-border-color: #005f32;
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: var(--primary);
+  --bs-btn-hover-border-color: var(--primary);
+}
+
 .hero {
   position: relative;
   min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* imagem aplicada via ::before para controlar opacidade sem afetar o texto */
-  background: none;
-  color: #fff;
 }
-
-/* logo do menu */
-.navbar-brand-logo {
-  height: 40px; /* ajuste conforme necessário */
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
+.hero-img {
+  height: 70vh;
+  object-fit: cover;
 }
-
-
-#inico {
-    color: black;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('img/fundoOculos.png'); /* substitua por sua imagem: ex. img/banner.jpg */
-  /* imagem um pouco menor */
-  background-size: 100% auto; /* ajuste percentual conforme preferir (ex.: 70%, 60%) */
-  /* deslocada um pouco para baixo */
-  background-position: center 59%; /* valores: center 50%, 60%, 70% para variar */
-  background-repeat: no-repeat;
-  opacity: 0.95; /* controle a transparência aqui (0 = transparente, 1 = opaca) */
-  z-index: 0;
-  filter: brightness(0.95);
-}
-
-.hero .container {
-  position: relative;
-  z-index: 1; /* garante que o conteúdo fique acima da imagem */
-  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
-}
-
-/* texto do hero preto */
-#h1Cuidando,
-#inicio .lead {
-  color: #000;
+.carousel-caption {
+  bottom: 12%;
+  text-shadow: 0 2px 8px rgba(0,0,0,.35);
 }
 
 #imgOculos1 {
-    width: 90%;
-    height: 100%;
+  width: 100%;
+  height: auto;
 }
+
+.card {
+  border: none;
+  box-shadow: var(--shadow);
+}
+
+.filters .btn {
+  border-radius: 999px;
+}
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.produto-card .card {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.produto-card:hover .card {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.12);
+}
+.produto-card.d-none {
+  display: none !important;
+}
+
+form .form-control {
+  border-radius: .6rem;
+}
+form .form-control:focus {
+  box-shadow: 0 0 0 .25rem rgba(1, 119, 69, .2);
+  border-color: var(--primary);
+}
+#contatoFeedback,
+#agendamentoFeedback {
+  font-weight: 500;
+}
+
+footer {
+  background: #0f172a;
+}
+
+.whatsapp-fab {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background: var(--primary);
+  color: #fff;
+  padding: .75rem 1rem;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  z-index: 1050;
+}
+.whatsapp-fab:hover {
+  background: #016737;
+  color: #fff;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#contato .map-full {
+  min-height: 60vh;
+}
+.cta-banner {
+  background: linear-gradient(135deg, #017745, #029d5c);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.cta-banner .btn-light {
+  color: var(--primary);
+}
+
